@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* --- Scroll Reveal Animations --- */
     const reveals = document.querySelectorAll('.reveal');
 
     function checkReveal() {
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkReveal);
     checkReveal(); // Check on load
 
-    /* --- Magnetic Buttons (Hover effect that tracks mouse) --- */
     const magneticElements = document.querySelectorAll('.magnetic');
     
     magneticElements.forEach(btn => {
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.clientX - rect.left; // x position within the element
             const y = e.clientY - rect.top;  // y position within the element
             
-            // Calculate distance from center (-1 to 1) 
+            // distance from center
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* --- Interactive Background Shapes & Parallax --- */
     const shapeContainer = document.getElementById('shapes-container');
     const shapeTypes = ['shape-star', 'shape-circle', 'shape-square'];
     const shapes = [];
@@ -60,8 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         shape.style.width = `${size}px`;
         shape.style.height = `${size}px`;
         
-        // Random start position within viewport bounds of hero
-        const top = Math.random() * 80; // 0 to 80%
+        const top = Math.random() * 80;
         const left = Math.random() * 90; // 0 to 90%
         shape.style.top = `${top}%`;
         shape.style.left = `${left}%`;
@@ -74,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         shapes.push(shape);
     }
 
-    // Parallax effect on mouse move in hero area
     document.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
@@ -94,45 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* --- Cursor Trail --- */
-    let dots = [];
-    const maxDots = 20;
 
-    document.addEventListener('mousemove', (e) => {
-        const dot = document.createElement('div');
-        dot.className = 'trail-dot';
-        dot.style.left = `${e.clientX}px`;
-        dot.style.top = `${e.clientY}px`;
-        document.body.appendChild(dot);
-        dots.push(dot);
 
-        // Remove dots if too many
-        if (dots.length > maxDots) {
-            const oldDot = dots.shift();
-            // oldDot.style.opacity = '0';
-            setTimeout(() => oldDot.remove(), 100);
-        }
-
-        // Auto shrink and remove logic
-        setTimeout(() => {
-            dot.style.width = '2px';
-            dot.style.height = '2px';
-            dot.style.opacity = '0';
-        }, 10);
-        
-        setTimeout(() => {
-            if (dot.parentNode) dot.remove();
-        }, 500);
-    });
-
-    /* --- Number Counter Animation for Stats --- */
-    // A simple logic to animate the numbers on the card stack when hovered
     const statCards = document.querySelectorAll('.visual-card');
     
     statCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             const target = card.querySelector('.target');
-            // Re-trigger animation with glow
             target.style.transform = 'scale(1.1)';
             target.style.textShadow = '0 0 20px rgba(163, 230, 53, 0.5)';
             setTimeout(() => { 
@@ -140,6 +103,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.style.textShadow = 'none';
             }, 300);
         });
-    });
-
-});
+    });});
