@@ -152,10 +152,11 @@
             <div class="cta-box reveal">
                 <h2>Ready to <span class="stroke-text-small">Level Up?</span></h2>
                 <p>Stop leaving robux on the table. Let's scale your game to the front page.</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name or Studio" required>
-                    <input type="text" placeholder="Link to your Game" required>
-                    <textarea placeholder="Tell us about the game and what you need..." rows="4"></textarea>
+                <form action="https://formspree.io/f/mjgprjnl" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name or Studio" required>
+                    <input type="email" name="email" placeholder="Your Email (to reply to you)" required>
+                    <input type="text" name="game_link" placeholder="Link to your Game" required>
+                    <textarea name="message" placeholder="Tell us about the game and what you need..." rows="4" required></textarea>
                     <button type="submit" class="btn primary-btn large">Send Message 🚀</button>
                 </form>
             </div>
