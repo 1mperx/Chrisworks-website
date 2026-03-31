@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChrisWorks | Supercharging Roblox Games</title>
+    <meta name="description" content="We take your great Roblox game and unlock its full potential. Stat optimization, consistent updates, and expert development.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Interactive trailing dots -->
+    <div id="cursor-trail"></div>
+
+    <!-- Floating Background Elements for Interactivity -->
+    <div class="floating-shapes" id="shapes-container">
+        <!-- JS will inject shapes here -->
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">CHR<span class="logo-i">i</span>SW<span class="logo-o">O</span>RKS</span>
+        </div>
+        <div class="nav-links">
+            <a href="#what-we-do" class="nav-link">What We Do</a>
+            <a href="#pricing" class="nav-link">Partnership</a>
+            <a href="#results" class="nav-link">Results</a>
+            <a href="#contact" class="btn primary-btn magnetic">Level Up Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="trusted-badge animate-pop">⭐ Trusted by Top Creators</div>
+                <h1 class="hero-title">
+                    <span class="highlight-primary">WE SCALE</span><br/>
+                    ROBLOX GAMES
+                </h1>
+                <p class="hero-subtitle">
+                    You built a great game. Now unlock its full potential. We handle the development, consistent updates, and stat optimization to turn your game into a massive success.
+                </p>
+                <div class="hero-cta">
+                    <a href="#pricing" class="btn primary-btn large magnetic">Work With Us</a>
+                    <a href="#simulator" class="btn secondary-btn large magnetic">Try the Simulator ↓</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" id="interactive-visual">
+                <!-- Interactive 3d-like cards representing games -->
+                <div class="card-stack">
+                    <div class="visual-card card-1">
+                        <div class="card-header">Active Players</div>
+                        <div class="card-arrow">+</div>
+                        <div class="card-stat">10M</div>
+                    </div>
+                    <div class="visual-card card-2">
+                        <div class="card-header">Monetization</div>
+                        <div class="card-arrow">↑</div>
+                        <div class="card-stat">180%</div>
+                    </div>
+                    <div class="visual-card card-3">
+                        <div class="card-header">Retention</div>
+                        <div class="card-arrow">↑</div>
+                        <div class="card-stat">400%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulator Dashboard Section -->
+        <section class="simulator-section section-padding text-center" id="simulator">
+            <div class="section-header">
+                <h2>Predict Your <span class="highlight">Growth</span></h2>
+                <p>Drag the slider below to see how improving retention and playtime changes your entire game trajectory.</p>
+            </div>
+            <div style="margin-top: 3rem; width: 100%; display: flex; justify-content: center;">
+                <iframe src="dashboard.html" style="width: 100%; max-width: 900px; height: 950px; border: none; outline: none;" scrolling="no"></iframe>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="services section-padding" id="what-we-do">
+            <div class="section-header text-center">
+                <h2>Why Trust <span class="highlight">ChrisWorks?</span></h2>
+                <p>We are experts in the Roblox algorithm. We don't just guess; we engineer success.</p>
+            </div>
+            <div class="grid-3">
+                <div class="service-card reveal">
+                    <div class="service-icon">📈</div>
+                    <h3>STAT<br><span class="highlight-primary">OPTIMIZATION</span></h3>
+                    <div class="card-divider"></div>
+                    <p>We dive deep into your analytics. From Day 1 Retention to ARPDAU, we identify the bottlenecks and rebalance your core loop to dominate the algorithm.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🛠️</div>
+                    <h3>HANDS-ON<br><span class="highlight-primary">DEVELOPMENT</span></h3>
+                    <div class="card-divider"></div>
+                    <p>You keep conceptualizing; we build. Our expert team handles all the heavy lifting: scripting, UI/UX, modeling, and fixing bugs.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📅</div>
+                    <h3>TRENDY<br><span class="highlight-primary">UPDATES</span></h3>
+                    <div class="card-divider"></div>
+                    <p>Frequent, high-quality updates keep players coming back. We run a weekly Live-Ops calendar with exclusive events to spike your CCU.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing / Partnership Section -->
+        <section class="pricing section-padding" id="pricing">
+            <div class="section-header text-center">
+                <h2>Flexible <span class="highlight">Partnerships</span></h2>
+                <p>We win when you win. Choose the model that fits your studio.</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="price-card reveal">
+                    <div class="price-badge">Most Popular</div>
+                    <h3>Equity Split</h3>
+                    <div class="price-amount">% Revenue</div>
+                    <p>We partner closely with you. We take a percentage of the game's revenue and handle all technical operations. No upfront costs.</p>
+                    <ul class="features">
+                        <li>✅ Full Development Support</li>
+                        <li>✅ Weekly Updates</li>
+                        <li>✅ Stat Rebalancing</li>
+                        <li>✅ Long-term Dedication</li>
+                    </ul>
+                    <a href="#contact" class="btn primary-btn magnetic">Let's Partner</a>
+                </div>
+                <div class="price-card secondary reveal">
+                    <h3>One-Time Payment</h3>
+                    <div class="price-amount">Custom Quote</div>
+                    <p>Need a specific system built, a UI overhauled, or a singular major update? We provide top-tier dev work for a flat rate.</p>
+                    <ul class="features">
+                        <li>✅ Specific Feature Delivery</li>
+                        <li>✅ UI/UX Redesigns</li>
+                        <li>✅ Code Optimization</li>
+                        <li>✅ Fast Turnaround</li>
+                    </ul>
+                    <a href="#contact" class="btn secondary-btn magnetic">Get a Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section-padding text-center" id="contact">
+            <div class="cta-box reveal">
+                <h2>Ready to <span class="stroke-text-small">Level Up?</span></h2>
+                <p>Stop leaving robux on the table. Let's scale your game to the front page.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name or Studio" required>
+                    <input type="text" placeholder="Link to your Game" required>
+                    <textarea placeholder="Tell us about the game and what you need..." rows="4"></textarea>
+                    <button type="submit" class="btn primary-btn large">Send Message 🚀</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <span class="logo-text text-white">CHRISWORKS</span>
+            </div>
+            <p>Supercharging Roblox Games.</p>
+            <div class="nav-links">
+                <a href="#what-we-do">What We Do</a>
+                <a href="#pricing">Partnership</a>
+            </div>
+            <p class="copyright">© 2026 ChrisWorks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
