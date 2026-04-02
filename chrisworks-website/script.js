@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. The Classic "OOF" Logo Clicker
     let logoClicks = 0;
+    let logoTimeout = null;
     const logo = document.querySelector('.logo');
     if(logo) {
         logo.addEventListener('click', (e) => {
@@ -214,7 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Revert clicks if they stop clicking
-            setTimeout(() => { if(logoClicks > 0) logoClicks--; }, 1500);
+            clearTimeout(logoTimeout);
+            logoTimeout = setTimeout(() => { logoClicks = 0; }, 2000);
         });
     }
 
