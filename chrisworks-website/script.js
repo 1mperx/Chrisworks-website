@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Console Troll
     console.log("%c🛑 WAIT A MINUTE! 🛑", "color: red; font-size: 40px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
-    console.log("%cWe both know you're just inspecting the element to see how we made this site. If you're a dev, stop snooping and just join us 😂: https://discord.gg/BT7VHqh67z", "color: #FF9900; font-size: 14px; font-weight: bold; padding: 10px; border: 1px solid #FF9900; background: #111; border-radius: 5px; line-height: 1.5;");
+    console.log("%cWe both know you're just inspecting the element to see how we made this site. If you're a dev, stop snooping and just join us 😂: https://discord.gg/xMyFwf9uxW", "color: #FF9900; font-size: 14px; font-weight: bold; padding: 10px; border: 1px solid #FF9900; background: #111; border-radius: 5px; line-height: 1.5;");
 
     // 2. The Classic "OOF" Clicker (Attached to the yellow 'O' in the logo to not break the home link)
     let logoClicks = 0;
