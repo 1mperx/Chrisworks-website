@@ -23,10 +23,10 @@
             </a>
         </div>
         <div class="nav-links">
-            <a href="#what-we-do" class="nav-link">What We Do</a>
-            <a href="#results" class="nav-link">Results</a>
-            <a href="#pricing" class="nav-link">Partnership</a>
+            <a href="services.html" class="nav-link">What We Do</a>
+            <a href="partnership.html" class="nav-link">Partnership</a>
             <a href="careers.html" class="nav-link">Careers</a>
+            <a href="about.html" class="nav-link">About</a>
         </div>
         <a href="#contact" class="btn primary-btn nav-cta magnetic">Level Up Now</a>
         <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
@@ -39,10 +39,10 @@
     <!-- Mobile Nav Overlay -->
     <div class="mobile-nav-overlay" id="mobile-nav">
         <div class="mobile-nav-content">
-            <a href="#what-we-do" class="mobile-nav-link">What We Do</a>
-            <a href="#results" class="mobile-nav-link">Results</a>
-            <a href="#pricing" class="mobile-nav-link">Partnership</a>
+            <a href="services.html" class="mobile-nav-link">What We Do</a>
+            <a href="partnership.html" class="mobile-nav-link">Partnership</a>
             <a href="careers.html" class="mobile-nav-link">Careers</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
             <a href="#contact" class="btn primary-btn large mobile-nav-cta">Level Up Now</a>
         </div>
     </div>
@@ -58,7 +58,7 @@
                     Trusted by Top Creators
                 </div>
                 <h1 class="hero-title">
-                    <span class="highlight-primary">WE SCALE</span><br/>
+                    <span class="highlight-primary">WE <span id="hero-changing-text" style="display: inline-block;">SCALE</span></span><br/>
                     ROBLOX GAMES
                 </h1>
                 <p class="hero-subtitle">
@@ -91,10 +91,48 @@
             </div>
         </section>
 
-        <!-- ============ 2. WHY TRUST US ============ -->
+        <!-- ============ 2. ABOUT US ============ -->
+        <section class="about-snippet section-padding" id="about">
+            <div class="about-hero-card reveal" style="max-width: 1100px; margin: 0 auto; background: rgba(20,20,20,0.6); border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1); padding: 5rem 4rem; border-radius: 30px; position: relative; overflow: hidden; display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                
+                <!-- Glowing Orb Background inside the card -->
+                <div style="position: absolute; top: -100px; left: -100px; width: 500px; height: 500px; background: var(--primary); filter: blur(200px); opacity: 0.15; border-radius: 50%; z-index: 0; pointer-events: none;"></div>
+                
+                <!-- Left Side: Hook -->
+                <div style="flex: 1 1 400px; position: relative; z-index: 1;">
+                    <div style="display: inline-block; padding: 0.4rem 1.2rem; border-radius: 50px; background: rgba(255,215,0,0.05); border: 1px solid rgba(255,215,0,0.2); color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; letter-spacing: 1px; text-transform: uppercase;">
+                        Who We Are
+                    </div>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; margin-bottom: 1rem; color: #fff;">
+                        Childhood friends turned <br>
+                        <span style="background: linear-gradient(90deg, var(--primary), #FF9900); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Industry Experts.</span>
+                    </h2>
+                </div>
+                
+                <!-- Right Side: Details -->
+                <div style="flex: 1 1 400px; position: relative; z-index: 1;">
+                    <p style="font-size: 1.25rem; line-height: 1.7; color: #eee; margin-bottom: 1rem; font-weight: 500;">
+                        We're not just a studio — we grew up building on Roblox. We know the engine, the audience, and the culture.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 2.5rem;">
+                        Today, we combine deep data analytics with elite technical execution to scale promising games into massive success stories.
+                    </p>
+                    <div>
+                        <a href="about.html" class="btn primary-btn magnetic" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2rem; font-size: 1.05rem;">
+                            Meet the Creators
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============ 4. WHAT WE DO ============ -->
         <section class="services section-padding" id="what-we-do">
             <div class="section-header text-center">
-                <h2>Why Trust <span class="highlight">ChrisWorks?</span></h2>
+                <h2>What We <span class="highlight">Do</span></h2>
                 <p>We are experts in the Roblox algorithm. We don't just guess; we engineer success.</p>
             </div>
             <div class="grid-3">
@@ -131,37 +169,7 @@
             </div>
         </section>
 
-        <!-- ============ 3. RESULTS ============ -->
-        <section class="results-section section-padding" id="results">
-            <div class="section-header text-center">
-                <h2>Proven <span class="highlight">Results</span></h2>
-                <p>Numbers don't lie. Here's what happens when ChrisWorks takes over.</p>
-            </div>
-            <div class="results-grid">
-                <div class="result-card reveal">
-                    <div class="result-number">+400%</div>
-                    <div class="result-label">Average Retention Increase</div>
-                    <p>Our stat optimization process consistently multiplies D1 retention across every game we touch.</p>
-                </div>
-                <div class="result-card reveal">
-                    <div class="result-number">+180%</div>
-                    <div class="result-label">Revenue Growth</div>
-                    <p>Smarter monetization funnels, better game passes, and optimized dev products drive sustainable income.</p>
-                </div>
-                <div class="result-card reveal">
-                    <div class="result-number">10M+</div>
-                    <div class="result-label">Players Reached</div>
-                    <p>Combined visits across games we've scaled. From thousands to millions — that's the ChrisWorks difference.</p>
-                </div>
-                <div class="result-card reveal">
-                    <div class="result-number">50+</div>
-                    <div class="result-label">Updates Shipped</div>
-                    <p>Weekly Live-Ops, seasonal events, and major content drops. We keep your game fresh and trending.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 4. SIMULATOR ============ -->
+        <!-- ============ 5. SIMULATOR ============ -->
         <section class="simulator-section section-padding text-center" id="simulator">
             <div class="section-header">
                 <h2>Predict Your <span class="highlight">Growth</span></h2>
@@ -172,143 +180,6 @@
             </div>
         </section>
 
-        <!-- ============ 5. TEAM ============ -->
-        <section class="team-section section-padding" id="team">
-            <div class="section-header text-center">
-                <h2>Meet the <span class="highlight">Team</span></h2>
-                <p>We are a team of developers and childhood friends who have been playing Roblox since we were kids.</p>
-            </div>
-            <div class="grid-3" style="margin-top: 4rem;">
-                <div class="service-card reveal" style="padding: 3rem 2rem;">
-                    <h3 style="font-size: 2rem;">Hyro</h3>
-                    <div class="highlight-primary" style="font-weight: 700; font-size: 1.1rem; margin-top: 0.5rem; letter-spacing: 2px;">CTO</div>
-                    <div class="card-divider"></div>
-                    <p>Technical visionary leading systems architecture and backend scale.</p>
-                </div>
-                <div class="service-card reveal chris-card" style="padding: 3rem 2rem; background-color: var(--primary); color: #000; position: relative;">
-                    <div class="card-content">
-                        <h3 style="font-size: 2rem; color: #000;">Chris</h3>
-                        <div style="font-weight: 700; font-size: 1.1rem; margin-top: 0.5rem; letter-spacing: 2px; color: #222;">CEO</div>
-                        <div class="card-divider" style="background-color: rgba(0,0,0,0.15);"></div>
-                        <p style="color: #222;">Studio director focused on algorithm optimization, game design and studio growth.</p>
-                        <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 800; color: #222; text-transform: uppercase; letter-spacing: 1px; animation: hintPulse 2s ease-in-out infinite;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#000" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.83a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,10.52,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.9-80.21ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.31,60,73.31,53s5-12.74,11.43-12.74S96.2,46,96.1,53,91,65.69,84.69,65.69Z"/></svg>
-                            Hover Me
-                        </div>
-                    </div>
-                    <div class="discord-overlay" onclick="navigator.clipboard.writeText('@anceling'); alert('Discord de Chris : @anceling (Copié !)');">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" viewBox="0 0 127.14 96.36" style="margin-bottom: 1rem;"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.83a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,10.52,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.9-80.21ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.31,60,73.31,53s5-12.74,11.43-12.74S96.2,46,96.1,53,91,65.69,84.69,65.69Z"/></svg>
-                        <h3 style="font-size: 1.8rem; color: #000; margin: 0;">@anceling</h3>
-                        <span style="font-size: 0.9rem; color: #222; margin-top: 0.5rem; font-weight: 700;">Click to copy</span>
-                    </div>
-                </div>
-                <div class="service-card reveal" style="padding: 3rem 2rem;">
-                    <h3 style="font-size: 2rem;">Skylex</h3>
-                    <div class="highlight-primary" style="font-weight: 700; font-size: 1.1rem; margin-top: 0.5rem; letter-spacing: 2px;">LEAD DEVELOPER</div>
-                    <div class="card-divider"></div>
-                    <p>Master programmer and builder bringing our ambitious games to life.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 6. PRICING ============ -->
-        <section class="pricing section-padding" id="pricing">
-            <div class="section-header text-center">
-                <h2>Flexible <span class="highlight">Partnerships</span></h2>
-                <p>We win when you win. Choose the model that fits your studio.</p>
-            </div>
-            <div class="pricing-cards">
-                <div class="price-card reveal">
-                    <div class="price-badge">Most Popular</div>
-                    <h3>Equity Split</h3>
-                    <div class="price-amount">% Revenue</div>
-                    <p>We partner closely with you. We take a percentage of the game's revenue and handle all technical operations. No upfront costs.</p>
-                    <ul class="features">
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Full Development Support</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Weekly Updates</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Stat Rebalancing</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Long-term Dedication</li>
-                    </ul>
-                    <a href="#contact" class="btn primary-btn magnetic">Let's Partner</a>
-                </div>
-                <div class="price-card secondary reveal">
-                    <h3>One-Time Payment</h3>
-                    <div class="price-amount">Custom Quote</div>
-                    <p>Need a specific system built, a UI overhauled, or a singular major update? We provide top-tier dev work for a flat rate.</p>
-                    <ul class="features">
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Specific Feature Delivery</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> UI/UX Redesigns</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Code Optimization</li>
-                        <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Fast Turnaround</li>
-                    </ul>
-                    <a href="#contact" class="btn secondary-btn magnetic">Get a Quote</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 7. FAQ ============ -->
-        <section class="faq-section section-padding" id="faq">
-            <div class="section-header text-center">
-                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-                <p>Everything you need to know before partnering with us.</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>How does the Equity Split model work?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We take a percentage of the game's revenue in exchange for full development support, weekly updates, and stat optimization. You pay nothing upfront — we invest our time and resources because we believe in your game. The exact split is discussed during our initial call.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>How long does it take to see results?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Most games see measurable improvements in retention and revenue within the first 2-4 weeks. Major CCU spikes typically happen after 1-2 months of consistent updates and optimization. Every game is different, but our data-driven approach accelerates growth from day one.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>What types of games do you work with?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We work with all genres on Roblox — simulators, tycoons, RPGs, obbies, horror, and more. The key requirement is that your game has potential and a solid foundation. We handle the technical scaling; you keep the creative vision.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Do I lose control of my game?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely not. You remain the owner and creative director of your game. We are your technical partners — every update, every change is approved by you before going live. Full transparency, always.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>What if my game is still in development?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>That's fine! We can help with both pre-launch optimization and post-launch scaling. If your game isn't live yet, we can review the concept, help with the architecture, and prepare it for a strong launch.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>How do I get started?</span>
-                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Just fill out the contact form below or reach out on Discord. We'll review your game, discuss the best partnership model, and get started within days. No long contracts — just results.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ============ 8. CONTACT ============ -->
         <section class="cta section-padding text-center" id="contact">
@@ -345,8 +216,8 @@
             </div>
             <p>Supercharging Roblox Games.</p>
             <div class="footer-links">
-                <a href="#what-we-do">What We Do</a>
-                <a href="#pricing">Partnership</a>
+                <a href="services.html">What We Do</a>
+                <a href="partnership.html">Partnership</a>
                 <a href="careers.html">Careers</a>
                 <a href="about.html">About</a>
                 <a href="privacy.html">Privacy Policy</a>

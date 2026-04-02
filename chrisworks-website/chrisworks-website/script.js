@@ -29,6 +29,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== Hero Text Rotation =====
+    const changingTextElement = document.getElementById('hero-changing-text');
+    if (changingTextElement) {
+        // Words to cycle through
+        const words = ['SCALE', 'DEVELOP', 'GROW', 'OPTIMIZE'];
+        let wordIndex = 0;
+
+        setInterval(() => {
+            // Fade out and slide up slightly
+            changingTextElement.style.transition = 'opacity 0.4s ease, transform 0.4s ease, color 0.4s ease';
+            changingTextElement.style.opacity = '0';
+            changingTextElement.style.transform = 'translateY(-15px)';
+
+            setTimeout(() => {
+                // Change word
+                wordIndex = (wordIndex + 1) % words.length;
+                changingTextElement.textContent = words[wordIndex];
+                
+                // Reset position to bottom for slide up
+                changingTextElement.style.transition = 'none';
+                changingTextElement.style.transform = 'translateY(15px)';
+                
+                // Force reflow
+                void changingTextElement.offsetWidth;
+                
+                // Fade in and slide to original position
+                changingTextElement.style.transition = 'opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.4s ease';
+                changingTextElement.style.opacity = '1';
+                changingTextElement.style.transform = 'translateY(0)';
+            }, 400); // Must match CSS fade out duration
+        }, 3000); // Change roughly every 3 seconds
+    }
 
     const reveals = document.querySelectorAll('.reveal');
 
@@ -143,14 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!question) return;
         
         question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+            const isActive = item.classList.contains('faq-open');
             
             // Close all others
-            faqItems.forEach(other => other.classList.remove('active'));
+            faqItems.forEach(other => other.classList.remove('faq-open'));
             
             // Toggle current
             if (!isActive) {
-                item.classList.add('active');
+                item.classList.add('faq-open');
             }
         });
     });

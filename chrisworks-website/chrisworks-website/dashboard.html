@@ -98,7 +98,7 @@
             // Interpolation Math
             const playtimeRaw = 5 + (15 * (slider / 100)); // 5 to 20
             const retentionRaw = 20 + (30 * (slider / 100)); // 20 to 50
-            const rankRaw = 30 + (67 * (slider / 100)); // 30 to 97
+            const rankRaw = slider === 0 ? 1 : slider; // visually align rank mapping with slider %
             const ccuRaw = 5 + (9995 * (slider / 100)); // 5 to 10k
             
             // Animated Values
@@ -241,28 +241,35 @@
                     </div>
 
                     {/* Game Preview Card */}
-                    <div className="w-full rounded-[24px] p-4 flex items-center gap-6 shadow-xl relative overflow-hidden group" style={{background: '#1A1500', border: '1px solid #3D3000'}}>
+                    {/* Game Preview Card */}
+                    <div className="w-full rounded-[24px] p-5 flex items-center gap-6 shadow-[0_15px_35px_rgba(0,0,0,0.5)] relative overflow-hidden group transition-all duration-300 hover:border-[#D4AF37]/40" style={{background: 'linear-gradient(145deg, #1A1500 0%, #0F0C00 100%)', border: '1px solid #3D3000'}}>
+                        {/* Subtle background glow */}
+                        <div className="absolute right-0 top-0 w-64 h-64 bg-[#FACC15]/5 blur-[60px] rounded-full pointer-events-none"></div>
+
                         {/* Glow effect when > 90% */}
                         {slider > 90 && (
-                            <div className="absolute inset-0 bg-[#FACC15]/10 pointer-events-none animate-pulse rounded-[24px]"></div>
+                            <div className="absolute inset-0 bg-[#FACC15]/10 pointer-events-none animate-pulse rounded-[24px] z-0"></div>
                         )}
                         
-                        <div className="w-32 h-20 md:w-40 md:h-24 bg-gray-800 rounded-lg flex-shrink-0 overflow-hidden border border-gray-700 relative">
+                        <div className="w-32 h-24 md:w-44 md:h-28 bg-gray-900 rounded-xl flex-shrink-0 overflow-hidden border border-[#3D3000] relative shadow-[0_5px_15px_rgba(0,0,0,0.6)] z-10">
                             {/* Game Thumbnail */}
-                            <img src="https://tr.rbxcdn.com/180DAY-3dad5aa240a219f46588922db371b4a9/256/256/Image/Png/noFilter" alt="Roblox Game" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <img src="https://tr.rbxcdn.com/180DAY-3dad5aa240a219f46588922db371b4a9/256/256/Image/Png/noFilter" alt="Roblox Game" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            {/* Subtle inner highlight */}
+                            <div className="absolute inset-0 rounded-xl border border-white/5 pointer-events-none"></div>
                         </div>
                         
-                        <div className="flex-1">
-                            <p className="text-xs font-bold text-yellow-400 tracking-widest uppercase mb-1">Your Game</p>
-                            <h3 className="text-xl font-bold text-gray-200 mb-1">Your Game</h3>
-                            <div className="flex items-center gap-1 text-sm font-semibold mb-2 text-yellow-400">
-                                <span>↗</span> 93% Rating
+                        <div className="flex-1 relative z-10">
+                            <p className="inline-block px-2 py-0.5 rounded-md bg-[#3D3000]/40 text-[10px] font-bold text-[#FACC15] tracking-[0.15em] uppercase mb-1.5 border border-[#FACC15]/20">Your Game</p>
+                            <h3 className="text-2xl font-bold text-white mb-0.5">Your Game</h3>
+                            <div className="flex items-center gap-1.5 text-sm font-semibold mb-3 text-[#FACC15]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                93% Rating
                             </div>
-                            <h2 className="text-4xl font-black smooth-number" style={{ color: hexColor, textShadow: `0 0 20px ${hexColor}66` }}>
+                            <h2 className="text-4xl md:text-5xl font-black smooth-number tracking-tight" style={{ color: hexColor, textShadow: `0 0 20px ${hexColor}66` }}>
                                 {formatCCU(ccu)}
                             </h2>
-                            <p className="text-xs font-bold text-gray-500 uppercase">Concurrent Users</p>
+                            <p className="text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-1">Concurrent Users</p>
                         </div>
                     </div>
 
