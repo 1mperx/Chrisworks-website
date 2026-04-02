@@ -1,5 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ===== Mobile Hamburger Menu =====
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-cta');
+
+    if (hamburgerBtn && mobileNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // ===== Hero Text Rotation =====
+    const changingTextElement = document.getElementById('hero-changing-text');
+    if (changingTextElement) {
+        // Words to cycle through
+        const words = ['SCALE', 'DEVELOP', 'GROW', 'OPTIMIZE'];
+        let wordIndex = 0;
+
+        setInterval(() => {
+            // Fade out and slide up slightly
+            changingTextElement.style.transition = 'opacity 0.4s ease, transform 0.4s ease, color 0.4s ease';
+            changingTextElement.style.opacity = '0';
+            changingTextElement.style.transform = 'translateY(-15px)';
+
+            setTimeout(() => {
+                // Change word
+                wordIndex = (wordIndex + 1) % words.length;
+                changingTextElement.textContent = words[wordIndex];
+                
+                // Reset position to bottom for slide up
+                changingTextElement.style.transition = 'none';
+                changingTextElement.style.transform = 'translateY(15px)';
+                
+                // Force reflow
+                void changingTextElement.offsetWidth;
+                
+                // Fade in and slide to original position
+                changingTextElement.style.transition = 'opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.4s ease';
+                changingTextElement.style.opacity = '1';
+                changingTextElement.style.transform = 'translateY(0)';
+            }, 400); // Must match CSS fade out duration
+        }, 3000); // Change roughly every 3 seconds
+    }
+
     const reveals = document.querySelectorAll('.reveal');
 
     function checkReveal() {
@@ -103,4 +165,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.style.textShadow = 'none';
             }, 300);
         });
-    });});
+    });
+
+    // ===== FAQ Accordion =====
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('faq-open');
+            
+            // Close all others
+            faqItems.forEach(other => other.classList.remove('faq-open'));
+            
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('faq-open');
+            }
+        });
+    });
+
+});
+
