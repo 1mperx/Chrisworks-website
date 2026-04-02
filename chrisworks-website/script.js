@@ -187,5 +187,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ==========================================
+    // 🤫 EASTER EGGS / TROLLS
+    // ==========================================
+
+    // 1. Console Troll
+    console.log("%c🛑 WAIT A MINUTE! 🛑", "color: red; font-size: 40px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
+    console.log("%cWe both know you're just inspecting the element to see how we made this site. If you're a dev, stop snooping and just join us 😂: https://discord.gg/BT7VHqh67z", "color: #FF9900; font-size: 14px; font-weight: bold; padding: 10px; border: 1px solid #FF9900; background: #111; border-radius: 5px; line-height: 1.5;");
+
+    // 2. The Classic "OOF" Logo Clicker
+    let logoClicks = 0;
+    const logo = document.querySelector('.logo');
+    if(logo) {
+        logo.addEventListener('click', (e) => {
+            logoClicks++;
+            if(logoClicks === 7) {
+                e.preventDefault(); // Prevent navigating if it's a link
+                const oofAudio = new Audio('https://www.myinstants.com/media/sounds/roblox-death-sound_1.mp3');
+                oofAudio.volume = 0.5;
+                oofAudio.play().catch(e => console.log('Oof sound blocked by browser!'));
+                
+                logo.style.transition = "transform 0.5s ease";
+                logo.style.transform = "rotate(180deg) scale(0.5)";
+                setTimeout(() => { logo.style.transform = "none"; }, 1000);
+                logoClicks = 0;
+            }
+            
+            // Revert clicks if they stop clicking
+            setTimeout(() => { if(logoClicks > 0) logoClicks--; }, 1500);
+        });
+    }
+
+    // 3. Konami Code (Up Up Down Down Left Right Left Right B A)
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let konamiIndex = 0;
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === konamiCode[konamiIndex] || e.key.toLowerCase() === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                // Trigger Barrel Roll
+                document.body.style.transition = "transform 2s ease-in-out";
+                document.body.style.transform = "rotate(360deg)";
+                setTimeout(() => {
+                    document.body.style.transition = "none";
+                    document.body.style.transform = "none";
+                    alert("🎮 CHEAT CODE ACTIVATED: Unlimited Robux granted... (just kidding)");
+                }, 2000);
+                konamiIndex = 0;
+            }
+        } else {
+            konamiIndex = 0; // Reset if wrong key
+        }
+    });
+
 });
 
